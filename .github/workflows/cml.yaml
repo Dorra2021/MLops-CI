@@ -34,6 +34,6 @@ jobs:
         run: |
           # Your ML workflow goes here
           pip3 install -r requirements.txt
-          python3 train.py
+          python3 model.py
           
 
