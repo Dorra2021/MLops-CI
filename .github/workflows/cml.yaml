@@ -43,5 +43,8 @@ jobs:
           cat metrics.txt >> report.md
           #make it accessible for team members
           cml-send-comment report.md
-          
+      - name: Set up Git Safe Directory
+        run: |
+          git config --global --add safe.directory /github/workspace
+
 
