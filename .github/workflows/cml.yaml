@@ -33,7 +33,15 @@ jobs:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Your ML workflow goes here
+          #installation of the requirements
           pip3 install -r requirements.txt
+          #run the model 
           python3 model.py
+          #define new readme file and define the machine learning pipeline
+          echo "##Model Metrics" > report.md
+          #inside the reamfile we will write the information from the text file  
+          cat metrics.txt >> report.md
+          #make it accessible for team members
+          cml-send-comment report.md
           
 
