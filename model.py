@@ -86,7 +86,6 @@ print('veeeeeeeeeeeeersion', tf.__version__)
 # Fit the model
 model.fit(tf.expand_dims(X_train,axis=-1), y_train, epochs=100)
 
-
 # Make and plot predictions for model_1
 y_preds = model.predict(X_test)
 plot_predictions(train_data=X_train, train_labels=y_train,  test_data=X_test, test_labels=y_test,  predictions=y_preds)
