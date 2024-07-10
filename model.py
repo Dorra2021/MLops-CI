@@ -82,9 +82,9 @@ model = tf.keras.Sequential([
 model.compile(loss = tf.keras.losses.mae,
               optimizer = tf.keras.optimizers.SGD(),
               metrics = ['mae'])
-
+print('veeeeeeeeeeeeersion', tf.__version__)
 # Fit the model
-model.fit(X_train, y_train, epochs=100)
+model.fit(tf.expand_dims(X_train, y_train, epochs=100))
 
 
 # Make and plot predictions for model_1
